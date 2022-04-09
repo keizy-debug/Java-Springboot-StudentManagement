@@ -1,0 +1,81 @@
+//    @Autowired
+//    private StudentService studentService;
+//
+//    public StudentController(StudentService studentService){
+//        super();
+//        this.studentService = studentService;
+//    }
+//
+//    // handler method to handle list students and return model and view
+//
+//    @GetMapping("/students")
+//    public String listStudent(Model model){
+//        model.addAttribute("students", studentService.getAllStudents());
+//        return "students";
+//    }
+//
+//    @GetMapping("/student/new")
+//    public String createStudentForm (Model model){
+//        // create student object to hold student form data
+//        Student student = new Student();
+//        model.addAttribute("student", student);
+//        return "create_student";
+//    }
+//
+//    @PostMapping("/student")
+//    public String saveStudent(@ModelAttribute("student") Student student){
+//      studentService.saveStudent(student);
+//      return "redirect:/students";
+//    }
+}
+#########################################################################################################3
+
+    public Student(String firstname, String lastname){}
+
+    public Student(String firstName, String lastName, String email) {
+        super();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
